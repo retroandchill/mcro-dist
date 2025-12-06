@@ -12,6 +12,7 @@
 #include "CoreMinimal.h"
 #include "Misc/AutomationTest.h"
 #include "Mcro/CommonCore.h"
+#include "Mcro/Tests/TestCompatibility.h"
 
 using namespace Mcro::Common;
 
@@ -23,7 +24,7 @@ struct FFunctionTestType
 
 	FString MemberMethodReturns(bool boolean, TCHAR character) const
 	{
-		return TEXT_"boolean %d character %c" _PRINTF(boolean, character);
+		return TEXT_"boolean {0} character {1}" _FMT(boolean, character);
 	}
 };
 
